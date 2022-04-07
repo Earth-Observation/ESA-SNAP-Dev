@@ -1,0 +1,18 @@
+[submodule "snap-engine"]
+	path = snap-engine
+	url = https://github.com/senbox-org/snap-engine.git
+[submodule "snap-archetypes"]
+	path = snap-archetypes
+	url = https://github.com/senbox-org/snap-archetypes.git
+[submodule "s1tbx"]
+	path = s1tbx
+	url = https://github.com/Earth-Observation/s1tbx.git
+[submodule "snap-desktop"]
+	path = snap-desktop
+	url = https://github.com/senbox-org/snap-desktop.git
+[submodule "s2tbx"]
+	path = s2tbx
+	url = https://github.com/senbox-org/s2tbx.git
+[submodule "snap-installer"]
+	path = snap-installer
+	url = https://github.com/senbox-org/snap-installer.git
