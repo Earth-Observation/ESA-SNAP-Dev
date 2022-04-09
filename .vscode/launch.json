@@ -1,0 +1,721 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        { 
+            "type": "java", 
+            "name": "SNAP Desktop", 
+            "request": "launch", 
+            "mainClass": "org.esa.snap.nbexec.Launcher", 
+            "cwd": "${workspaceFolder}/snap-application/target/snap", 
+            "vmArgs": "-Dsun.java2d.noddraw=true -Dsun.awt.nopixfmt=true -Dsun.java2d.dpiaware=false -Dorg.netbeans.level=INFO -Dsnap.debug=true -Xmx4G", 
+            "args": [
+                "--userdir", "{workspaceFolder}/snap-application/target/userdir", 
+                "--clusters", "${workspaceFolder}/s2tbx/s2tbx-kit/target/netbeans_clusters/s2tbx",
+                "--patches", "${workspaceFolder}/snap-engine/$/target/classes:${workspaceFolder}/s2tbx/$/target/classes"
+            ], 
+        },
+         
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch SmosFileReader",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.binio.smos.SmosFileReader",
+            "projectName": "ceres-binio"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileChannelTest",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.binio.util.FileChannelTest",
+            "projectName": "ceres-binio"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestExecutable",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.core.TestExecutable",
+            "projectName": "ceres-core"
+        },
+        {
+            "type": "java",
+            "name": "Launch Launcher",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.launcher.Launcher",
+            "projectName": "ceres-core"
+        },
+        {
+            "type": "java",
+            "name": "Launch NbCodeGenTool",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.nbmgen.NbCodeGenTool",
+            "projectName": "ceres-core"
+        },
+        {
+            "type": "java",
+            "name": "Launch NbmGenTool",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.nbmgen.NbmGenTool",
+            "projectName": "ceres-core"
+        },
+        {
+            "type": "java",
+            "name": "Launch GenAUCatalog",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.util.GenAUCatalog",
+            "projectName": "ceres-core"
+        },
+        {
+            "type": "java",
+            "name": "Launch ImageDrawingPerformanceRunner",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.glayer.jaitests.ImageDrawingPerformanceRunner",
+            "projectName": "ceres-glayer"
+        },
+        {
+            "type": "java",
+            "name": "Launch JaiOperationDescriptorEditor",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.glayer.jaitests.JaiOperationDescriptorEditor",
+            "projectName": "ceres-glayer"
+        },
+        {
+            "type": "java",
+            "name": "Launch TransparencyTest",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.glayer.jaitests.TransparencyTest",
+            "projectName": "ceres-glayer"
+        },
+        {
+            "type": "java",
+            "name": "Launch NavControl",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.glayer.swing.NavControl",
+            "projectName": "ceres-glayer"
+        },
+        {
+            "type": "java",
+            "name": "Launch NavControl2",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.glayer.swing.NavControl2",
+            "projectName": "ceres-glayer"
+        },
+        {
+            "type": "java",
+            "name": "Launch DisplayImage",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.glayer.tools.DisplayImage",
+            "projectName": "ceres-glayer"
+        },
+        {
+            "type": "java",
+            "name": "Launch DisplayImagePyramid",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.glayer.tools.DisplayImagePyramid",
+            "projectName": "ceres-glayer"
+        },
+        {
+            "type": "java",
+            "name": "Launch PrintTiffInfo",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.glayer.tools.PrintTiffInfo",
+            "projectName": "ceres-glayer"
+        },
+        {
+            "type": "java",
+            "name": "Launch StoreTiffPyramid",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.glayer.tools.StoreTiffPyramid",
+            "projectName": "ceres-glayer"
+        },
+        {
+            "type": "java",
+            "name": "Launch StoreTiledTiff",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.glayer.tools.StoreTiledTiff",
+            "projectName": "ceres-glayer"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConvolveTestMain",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.jai.ConvolveTestMain",
+            "projectName": "ceres-jai"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFTConvolveTestMain",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.jai.DFTConvolveTestMain",
+            "projectName": "ceres-jai"
+        },
+        {
+            "type": "java",
+            "name": "Launch DFTTestMain",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.jai.DFTTestMain",
+            "projectName": "ceres-jai"
+        },
+        {
+            "type": "java",
+            "name": "Launch JaiShell",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.jai.JaiShell",
+            "projectName": "ceres-jai"
+        },
+        {
+            "type": "java",
+            "name": "Launch WarpTestMain",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.jai.WarpTestMain",
+            "projectName": "ceres-jai"
+        },
+        {
+            "type": "java",
+            "name": "Launch JsJaiShell",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.jai.js.JsJaiShell",
+            "projectName": "ceres-jai"
+        },
+        {
+            "type": "java",
+            "name": "Launch GameOfLifeTestMain",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.jai.operator.GameOfLifeTestMain",
+            "projectName": "ceres-jai"
+        },
+        {
+            "type": "java",
+            "name": "Launch MetadataEngineMain",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.standalone.MetadataEngineMain",
+            "projectName": "ceres-metadata"
+        },
+        {
+            "type": "java",
+            "name": "Launch ActionLabelTest",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.ActionLabelTest",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch GridGuiTest",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.GridGuiTest",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch GridGuiTest2",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.GridGuiTest2",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch ListControlBarTest",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.ListControlBarTest",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch TableLayoutTest",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.TableLayoutTest",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch TreeCellExtenderTest",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.TreeCellExtenderTest",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch BindingContextUI",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.binding.BindingContextUI",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch CheckThreadViolationRepaintManager",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.debug.CheckThreadViolationRepaintManager",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch EventDispatchThreadHangMonitor",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.debug.EventDispatchThreadHangMonitor",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch EventDispatchThreadHangMonitor$Tests",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.debug.EventDispatchThreadHangMonitor$Tests",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch FigureEditorDemo",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.demo.FigureEditorDemo",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch FocusApp",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.demo.FocusApp",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch MultiSelectionSourceApp",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.demo.MultiSelectionSourceApp",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch DefaultShapeFigureRunner",
+            "request": "launch",
+            "mainClass": "com.bc.ceres.swing.figure.support.DefaultShapeFigureRunner",
+            "projectName": "ceres-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch TriangulationBourke",
+            "request": "launch",
+            "mainClass": "org.jlinda.core.delaunay.TriangulationBourke",
+            "projectName": "jlinda-core"
+        },
+        {
+            "type": "java",
+            "name": "Launch JP2FileReader",
+            "request": "launch",
+            "mainClass": "org.esa.snap.lib.openjpeg.header.JP2FileReader",
+            "projectName": "lib-openjpeg"
+        },
+        {
+            "type": "java",
+            "name": "Launch Launcher(1)",
+            "request": "launch",
+            "mainClass": "org.esa.snap.nbexec.Launcher",
+            "projectName": "nbexec"
+        },
+        {
+            "type": "java",
+            "name": "Launch ImageIOUtils",
+            "request": "launch",
+            "mainClass": "nitf.imageio.ImageIOUtils",
+            "projectName": "s2tbx-rapideye-reader"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sentinel2ProductReaderMockUpTest",
+            "request": "launch",
+            "mainClass": "org.esa.s2tbx.dataio.s2.l1b.Sentinel2ProductReaderMockUpTest",
+            "projectName": "s2tbx-s2msi-reader"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sentinel2ProductReaderMockUpTest(1)",
+            "request": "launch",
+            "mainClass": "org.esa.s2tbx.dataio.s2.l1c.Sentinel2ProductReaderMockUpTest",
+            "projectName": "s2tbx-s2msi-reader"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sentinel2ProductReaderMockUpTest(2)",
+            "request": "launch",
+            "mainClass": "org.esa.s2tbx.dataio.s2.l2a.Sentinel2ProductReaderMockUpTest",
+            "projectName": "s2tbx-s2msi-reader"
+        },
+        {
+            "type": "java",
+            "name": "Launch AggregatorItemDialog",
+            "request": "launch",
+            "mainClass": "org.esa.snap.binning.operator.ui.AggregatorItemDialog",
+            "projectName": "snap-binning-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch MappedByteBufferRunner",
+            "request": "launch",
+            "mainClass": "org.esa.snap.binning.operator.MappedByteBufferRunner",
+            "projectName": "snap-binning"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestBinner",
+            "request": "launch",
+            "mainClass": "org.esa.snap.binning.operator.TestBinner",
+            "projectName": "snap-binning"
+        },
+        {
+            "type": "java",
+            "name": "Launch RegionPerformanceTest",
+            "request": "launch",
+            "mainClass": "org.esa.snap.binning.support.RegionPerformanceTest",
+            "projectName": "snap-binning"
+        },
+        {
+            "type": "java",
+            "name": "Launch SpatialDataDayComputer",
+            "request": "launch",
+            "mainClass": "org.esa.snap.binning.support.SpatialDataDayComputer",
+            "projectName": "snap-binning"
+        },
+        {
+            "type": "java",
+            "name": "Launch PyramidBuilder",
+            "request": "launch",
+            "mainClass": "org.esa.snap.core.image.PyramidBuilder",
+            "projectName": "snap-core"
+        },
+        {
+            "type": "java",
+            "name": "Launch CodeClassGenerator",
+            "request": "launch",
+            "mainClass": "org.esa.snap.core.util.geotiff.codes.CodeClassGenerator",
+            "projectName": "snap-core"
+        },
+        {
+            "type": "java",
+            "name": "Launch HeaderParser",
+            "request": "launch",
+            "mainClass": "org.esa.snap.dataio.envi.HeaderParser",
+            "projectName": "snap-envi-reader"
+        },
+        {
+            "type": "java",
+            "name": "Launch StxPerformanceCheck",
+            "request": "launch",
+            "mainClass": "org.esa.snap.dataio.envisat.StxPerformanceCheck",
+            "projectName": "snap-envisat-reader"
+        },
+        {
+            "type": "java",
+            "name": "Launch TiffReadingPerformanceTest",
+            "request": "launch",
+            "mainClass": "org.esa.snap.dataio.geotiff.TiffReadingPerformanceTest",
+            "projectName": "snap-geotiff"
+        },
+        {
+            "type": "java",
+            "name": "Launch DefaultSingleTargetProductDialogTest",
+            "request": "launch",
+            "mainClass": "org.esa.snap.core.gpf.ui.DefaultSingleTargetProductDialogTest",
+            "projectName": "snap-gpf-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReprojectionDialog",
+            "request": "launch",
+            "mainClass": "org.esa.snap.core.gpf.ui.reproject.ReprojectionDialog",
+            "projectName": "snap-gpf-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch OperatorDoclet",
+            "request": "launch",
+            "mainClass": "org.esa.snap.core.gpf.doclet.OperatorDoclet",
+            "projectName": "snap-gpf"
+        },
+        {
+            "type": "java",
+            "name": "Launch JaiTileSchedulerRunner",
+            "request": "launch",
+            "mainClass": "org.esa.snap.core.gpf.experimental.JaiTileSchedulerRunner",
+            "projectName": "snap-gpf"
+        },
+        {
+            "type": "java",
+            "name": "Launch GPT",
+            "request": "launch",
+            "mainClass": "org.esa.snap.core.gpf.main.GPT",
+            "projectName": "snap-gpf"
+        },
+        {
+            "type": "java",
+            "name": "Launch PointOperatorTest",
+            "request": "launch",
+            "mainClass": "org.esa.snap.core.gpf.pointop.PointOperatorTest",
+            "projectName": "snap-gpf"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "org.esa.snap.main.Main",
+            "projectName": "snap-main"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sen3ExpAtmosphericConverter",
+            "request": "launch",
+            "mainClass": "org.esa.snap.dataio.netcdf.util.Sen3ExpAtmosphericConverter",
+            "projectName": "snap-netcdf"
+        },
+        {
+            "type": "java",
+            "name": "Launch PConvertMain",
+            "request": "launch",
+            "mainClass": "org.esa.snap.pconvert.PConvertMain",
+            "projectName": "snap-pconvert"
+        },
+        {
+            "type": "java",
+            "name": "Launch RepositoriesCredentialsPersistence",
+            "request": "launch",
+            "mainClass": "org.esa.snap.product.library.v2.preferences.RepositoriesCredentialsPersistence",
+            "projectName": "snap-product-library-v2"
+        },
+        {
+            "type": "java",
+            "name": "Launch FeatureFigureEditorApp",
+            "request": "launch",
+            "mainClass": "org.esa.snap.rcp.layermanager.layersrc.shapefile.FeatureFigureEditorApp",
+            "projectName": "snap-rcp"
+        },
+        {
+            "type": "java",
+            "name": "Launch MaskApplicationMain",
+            "request": "launch",
+            "mainClass": "org.esa.snap.rcp.mask.MaskApplicationMain",
+            "projectName": "snap-rcp"
+        },
+        {
+            "type": "java",
+            "name": "Launch RangeEditorDialog",
+            "request": "launch",
+            "mainClass": "org.esa.snap.rcp.mask.RangeEditorDialog",
+            "projectName": "snap-rcp"
+        },
+        {
+            "type": "java",
+            "name": "Launch PlacemarkDialog",
+            "request": "launch",
+            "mainClass": "org.esa.snap.rcp.placemark.PlacemarkDialog",
+            "projectName": "snap-rcp"
+        },
+        {
+            "type": "java",
+            "name": "Launch AxisRangeControlTest",
+            "request": "launch",
+            "mainClass": "org.esa.snap.rcp.statistics.AxisRangeControlTest",
+            "projectName": "snap-rcp"
+        },
+        {
+            "type": "java",
+            "name": "Launch CollapsibleItemsPanel",
+            "request": "launch",
+            "mainClass": "org.esa.snap.rcp.util.CollapsibleItemsPanel",
+            "projectName": "snap-rcp"
+        },
+        {
+            "type": "java",
+            "name": "Launch DateTimePicker",
+            "request": "launch",
+            "mainClass": "org.esa.snap.rcp.util.DateTimePicker",
+            "projectName": "snap-rcp"
+        },
+        {
+            "type": "java",
+            "name": "Launch DateTimePickerCellEditor",
+            "request": "launch",
+            "mainClass": "org.esa.snap.rcp.util.DateTimePickerCellEditor",
+            "projectName": "snap-rcp"
+        },
+        {
+            "type": "java",
+            "name": "Launch PasswordCryptoBuilder",
+            "request": "launch",
+            "mainClass": "org.esa.snap.remote.execution.utils.PasswordCryptoBuilder",
+            "projectName": "snap-remote-execution"
+        },
+        {
+            "type": "java",
+            "name": "Launch BundleCreator",
+            "request": "launch",
+            "mainClass": "org.esa.snap.runtime.BundleCreator",
+            "projectName": "snap-runtime"
+        },
+        {
+            "type": "java",
+            "name": "Launch Launcher(2)",
+            "request": "launch",
+            "mainClass": "org.esa.snap.runtime.Launcher",
+            "projectName": "snap-runtime"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestApp",
+            "request": "launch",
+            "mainClass": "org.esa.snap.runtime.TestApp",
+            "projectName": "snap-runtime"
+        },
+        {
+            "type": "java",
+            "name": "Launch SmartConfigurator",
+            "request": "launch",
+            "mainClass": "org.esa.snap.smart.configurator.ui.SmartConfigurator",
+            "projectName": "snap-smart-configurator-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch StatisticsDatabase",
+            "request": "launch",
+            "mainClass": "org.esa.snap.statistics.tools.StatisticsDatabase",
+            "projectName": "snap-statistics"
+        },
+        {
+            "type": "java",
+            "name": "Launch SummaryCSVTool",
+            "request": "launch",
+            "mainClass": "org.esa.snap.statistics.tools.SummaryCSVTool",
+            "projectName": "snap-statistics"
+        },
+        {
+            "type": "java",
+            "name": "Launch CodeGenerator",
+            "request": "launch",
+            "mainClass": "org.esa.snap.tango.internal.CodeGenerator",
+            "projectName": "snap-tango"
+        },
+        {
+            "type": "java",
+            "name": "Launch ColorSelectionComponentRunner",
+            "request": "launch",
+            "mainClass": "org.esa.snap.ui.color.ColorSelectionComponentRunner",
+            "projectName": "snap-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch OutputGeometryForm",
+            "request": "launch",
+            "mainClass": "org.esa.snap.ui.crs.OutputGeometryForm",
+            "projectName": "snap-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch PredefinedCrsPanel",
+            "request": "launch",
+            "mainClass": "org.esa.snap.ui.crs.PredefinedCrsPanel",
+            "projectName": "snap-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch CustomCrsPanel",
+            "request": "launch",
+            "mainClass": "org.esa.snap.ui.crs.projdef.CustomCrsPanel",
+            "projectName": "snap-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch SpectrumChooserMainForManualTesting",
+            "request": "launch",
+            "mainClass": "org.esa.snap.ui.product.spectrum.SpectrumChooserMainForManualTesting",
+            "projectName": "snap-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch SpectralUnmixingDialog",
+            "request": "launch",
+            "mainClass": "org.esa.snap.unmixing.ui.SpectralUnmixingDialog",
+            "projectName": "snap-unmix-ui"
+        },
+        {
+            "type": "java",
+            "name": "Launch HttpMockService",
+            "request": "launch",
+            "mainClass": "org.esa.snap.vfs.remote.http.HttpMockService",
+            "projectName": "snap-virtual-file-system"
+        },
+        {
+            "type": "java",
+            "name": "Launch S3MockService",
+            "request": "launch",
+            "mainClass": "org.esa.snap.vfs.remote.s3.S3MockService",
+            "projectName": "snap-virtual-file-system"
+        },
+        {
+            "type": "java",
+            "name": "Launch SwiftAuthMockService",
+            "request": "launch",
+            "mainClass": "org.esa.snap.vfs.remote.swift.SwiftAuthMockService",
+            "projectName": "snap-virtual-file-system"
+        },
+        {
+            "type": "java",
+            "name": "Launch SwiftMockService",
+            "request": "launch",
+            "mainClass": "org.esa.snap.vfs.remote.swift.SwiftMockService",
+            "projectName": "snap-virtual-file-system"
+        },
+        {
+            "type": "java",
+            "name": "Launch LandMaskRasterCreator",
+            "request": "launch",
+            "mainClass": "org.esa.snap.watermask.util.LandMaskRasterCreator",
+            "projectName": "snap-watermask"
+        },
+        {
+            "type": "java",
+            "name": "Launch MissingTilesPropertyFileGenerator",
+            "request": "launch",
+            "mainClass": "org.esa.snap.watermask.util.MissingTilesPropertyFileGenerator",
+            "projectName": "snap-watermask"
+        },
+        {
+            "type": "java",
+            "name": "Launch ModisMosaicer",
+            "request": "launch",
+            "mainClass": "org.esa.snap.watermask.util.ModisMosaicer",
+            "projectName": "snap-watermask"
+        },
+        {
+            "type": "java",
+            "name": "Launch ModisProductHandler",
+            "request": "launch",
+            "mainClass": "org.esa.snap.watermask.util.ModisProductHandler",
+            "projectName": "snap-watermask"
+        },
+        {
+            "type": "java",
+            "name": "Launch RasterImageOutputter",
+            "request": "launch",
+            "mainClass": "org.esa.snap.watermask.util.RasterImageOutputter",
+            "projectName": "snap-watermask"
+        },
+        {
+            "type": "java",
+            "name": "Launch ShapeFileRasterizer",
+            "request": "launch",
+            "mainClass": "org.esa.snap.watermask.util.ShapeFileRasterizer",
+            "projectName": "snap-watermask"
+        },
+        {
+            "type": "java",
+            "name": "Launch TileModeGenerator",
+            "request": "launch",
+            "mainClass": "org.esa.snap.netbeans.tile.cli.TileModeGenerator",
+            "projectName": "tiled-editors"
+        }
+    ]
+}

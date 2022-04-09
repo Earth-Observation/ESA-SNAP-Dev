@@ -6,7 +6,8 @@
 		"dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick an Ubuntu version: hirsute, focal, bionic
 		// Use hirsute or bionic on local arm64/Apple Silicon.
-		"args": { "VARIANT": "focal" }
+		"args": { "VARIANT": "8u322-8.60.0.21" }
+		
 	},
 
 	// Set *default* container specific settings.json values on container create.
@@ -14,7 +15,14 @@
 
 
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": [],
+	"extensions": [
+		"mhutchie.git-graph",
+		"codezombiech.gitignore",
+		"donjayamanne.githistory",
+		"eamodio.gitlens",
+		"vscjava.vscode-java-pack"
+
+	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -23,13 +31,22 @@
 	// "postCreateCommand": "uname -a",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"containerUser": "vscode",
 	"remoteUser": "vscode",
 	"features": {
+
+		"username": "automatic",
+		"uid": "automatic",
+		"gid": "automatic",
+		"installZsh": true,
+		"installOhMyZsh": true,
+		"upgradePackages": true,
+		"nonFreePackages": false,
 		"git": "latest",
 		"git-lfs": "latest",
 		"desktop-lite": "latest",
-		"python": "3.9",
-		"java": "8",
+		"python": "3.8",
+		//"java": "8",
 		"maven": "latest"
 	}
 }

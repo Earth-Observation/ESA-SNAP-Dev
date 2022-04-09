@@ -1,0 +1,6 @@
+{
+    "java.project.sourcePaths": [
+        "snap-engine"
+    ],
+    "maven.view": "hierarchical"
+}

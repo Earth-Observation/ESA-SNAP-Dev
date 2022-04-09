@@ -1,0 +1,89 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "verify",
+            "type": "shell",
+            "command": "mvn -B verify",
+            "group": "build"
+        },
+        {
+            "label": "snap-engine",
+            "type": "shell",
+            "command": "mvn clean install -DskipTests=true",
+            "group": "build",
+            "options": {"cwd": "${workspaceFolder}/snap-engine"},
+        },
+        {
+            "label": "snap-desktop",
+            "type": "shell",
+            "command": "mvn clean install -DskipTests=true",
+            "group": "build",
+            "options": {"cwd": "${workspaceFolder}/snap-desktop"},
+        },
+        {
+            "label": "s1tbx",
+            "type": "shell",
+            "command": "mvn clean install -DskipTests=true",
+            "group": "build",
+            "options": {"cwd": "${workspaceFolder}/s1tbx"},
+        },
+        {
+            "label": "s2tbx",
+            "type": "shell",
+            "command": "mvn clean install -DskipTests=true",
+            "group": "build",
+            "options": {"cwd": "${workspaceFolder}/s2tbx"},
+        },
+        {
+            "label": "snap-installer",
+            "type": "shell",
+            "command": "mvn clean install -DskipTests=true",
+            "group": "build",
+            "options": {"cwd": "${workspaceFolder}/snap-installer"},
+        },
+        {
+            "label": "snap-engine",
+            "type": "shell",
+            "command": "mvn clean install",
+            "group": "test",
+            "options": {"cwd": "${workspaceFolder}/snap-engine"},
+        },
+        {
+            "label": "snap-desktop",
+            "type": "shell",
+            "command": "mvn clean install",
+            "group": "test",
+            "options": {"cwd": "${workspaceFolder}/snap-desktop"},
+        },
+        {
+            "label": "s1tbx",
+            "type": "shell",
+            "command": "mvn clean install",
+            "group": "test",
+            "options": {"cwd": "${workspaceFolder}/s1tbx"},
+        },
+        {
+            "label": "s2tbx",
+            "type": "shell",
+            "command": "mvn clean install",
+            "group": "test",
+            "options": {"cwd": "${workspaceFolder}/s2tbx"},
+        },
+        {
+            "label": "snap-installer",
+            "type": "shell",
+            "command": "mvn clean install",
+            "group": "test",
+            "options": {"cwd": "${workspaceFolder}/snap-installer"},
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "command": "mvn -B test",
+            "group": "test"
+        }
+    ]
+}
