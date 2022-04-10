@@ -16,3 +16,12 @@
 [submodule "snap-installer"]
 	path = snap-installer
 	url = https://github.com/senbox-org/snap-installer.git
+[submodule "s3tbx"]
+	path = s3tbx
+	url = https://github.com/senbox-org/s3tbx.git
+[submodule "smos-box"]
+	path = smos-box
+	url = https://github.com/senbox-org/smos-box.git
+[submodule "probavbox"]
+	path = probavbox
+	url = https://github.com/senbox-org/probavbox.git
