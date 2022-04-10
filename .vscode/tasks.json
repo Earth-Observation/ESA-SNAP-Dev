@@ -10,80 +10,177 @@
             "group": "build"
         },
         {
+            "label": "build-snap-engine",
+            "type": "shell",
+            "command": "mvn clean -DskipTests=true install",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/snap-engine"
+            }
+        },
+        {
+            "label": "build-snap-desktop",
+            "type": "shell",
+            "command": "mvn clean -DskipTests=true install",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/snap-desktop"
+            }
+        },
+        {
+            "label": "build-s1tbx",
+            "type": "shell",
+            "command": "mvn clean -DskipTests=true install",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/s1tbx"
+            }
+        },
+        {
+            "label": "build-s2tbx",
+            "type": "shell",
+            "command": "mvn clean -DskipTests=true install",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/s2tbx"
+            }
+        },
+        {
+            "label": "build-snap-installer",
+            "type": "shell",
+            "command": "mvn clean -DskipTests=true install",
+            "group": "build",
+            "options": {
+                "cwd": "${workspaceFolder}/snap-installer"
+            }
+        },
+        {
             "label": "snap-engine",
             "type": "shell",
-            "command": "mvn clean install -DskipTests=true",
-            "group": "build",
-            "options": {"cwd": "${workspaceFolder}/snap-engine"},
+            "command": "mvn clean install",
+            "group": "test",
+            "options": {
+                "cwd": "${workspaceFolder}/snap-engine"
+            }
         },
         {
             "label": "snap-desktop",
             "type": "shell",
-            "command": "mvn clean install -DskipTests=true",
-            "group": "build",
-            "options": {"cwd": "${workspaceFolder}/snap-desktop"},
-        },
-        {
-            "label": "s1tbx",
-            "type": "shell",
-            "command": "mvn clean install -DskipTests=true",
-            "group": "build",
-            "options": {"cwd": "${workspaceFolder}/s1tbx"},
-        },
-        {
-            "label": "s2tbx",
-            "type": "shell",
-            "command": "mvn clean install -DskipTests=true",
-            "group": "build",
-            "options": {"cwd": "${workspaceFolder}/s2tbx"},
-        },
-        {
-            "label": "snap-installer",
-            "type": "shell",
-            "command": "mvn clean install -DskipTests=true",
-            "group": "build",
-            "options": {"cwd": "${workspaceFolder}/snap-installer"},
-        },
-        {
-            "label": "snap-engine",
-            "type": "shell",
             "command": "mvn clean install",
             "group": "test",
-            "options": {"cwd": "${workspaceFolder}/snap-engine"},
-        },
-        {
-            "label": "snap-desktop",
-            "type": "shell",
-            "command": "mvn clean install",
-            "group": "test",
-            "options": {"cwd": "${workspaceFolder}/snap-desktop"},
+            "options": {
+                "cwd": "${workspaceFolder}/snap-desktop"
+            }
         },
         {
             "label": "s1tbx",
             "type": "shell",
             "command": "mvn clean install",
             "group": "test",
-            "options": {"cwd": "${workspaceFolder}/s1tbx"},
+            "options": {
+                "cwd": "${workspaceFolder}/s1tbx"
+            }
         },
         {
             "label": "s2tbx",
             "type": "shell",
             "command": "mvn clean install",
             "group": "test",
-            "options": {"cwd": "${workspaceFolder}/s2tbx"},
+            "options": {
+                "cwd": "${workspaceFolder}/s2tbx"
+            }
         },
         {
             "label": "snap-installer",
             "type": "shell",
             "command": "mvn clean install",
             "group": "test",
-            "options": {"cwd": "${workspaceFolder}/snap-installer"},
+            "options": {
+                "cwd": "${workspaceFolder}/snap-installer"
+            }
         },
         {
-            "label": "test",
+            "label": "build-snap-with-test",
+            "dependsOrder": "parallel",
+            "dependsOn": [
+                "build-snap-engine",
+                "snap-desktop",
+                "s1tbx",
+                "s2tbx",
+                "snap-installer"
+            ],
+            "problemMatcher": [
+                "$nvcc"
+            ]
+        },
+        {
+            "label": "build-snap-no-test",
+            "dependsOrder": "parallel",
+            "dependsOn": [
+                "build-snap-engine",
+                "build-snap-desktop",
+                "build-s1tbx",
+                "build-s2tbx",
+                "build-snap-installer"
+            ],
+            "problemMatcher": [
+                "$nvcc"
+            ]
+        },
+        {
+            "label": "install-snap-engine",
             "type": "shell",
-            "command": "mvn -B test",
-            "group": "test"
+            "command": "mvn clean install -B -V",
+            "options": {
+                "cwd": "${workspaceFolder}/snap-engine"
+            }
+        },
+        {
+            "label": "install-snap-desktop",
+            "type": "shell",
+            "command": "mvn clean install -B -V",
+            "options": {
+                "cwd": "${workspaceFolder}/snap-desktop"
+            }
+        },
+        {
+            "label": "install-s1tbx",
+            "type": "shell",
+            "command": "mvn clean install -B -V",
+            "options": {
+                "cwd": "${workspaceFolder}/s1tbx"
+            }
+        },
+        {
+            "label": "install-s2tbx",
+            "type": "shell",
+            "command": "mvn clean install -B -V",
+            "options": {
+                "cwd": "${workspaceFolder}/s2tbx"
+            }
+        },
+        {
+            "label": "install-snap-installer",
+            "type": "shell",
+            "command": "mvn clean install -B -V",
+            "options": {
+                "cwd": "${workspaceFolder}/snap-installer"
+            }
+        },
+        {
+            "label": "install-snap",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "install-snap-engine",
+                "install-snap-desktop",
+                "install-s1tbx",
+                "install-s2tbx",
+                "install-snap-installer"
+            ],
+            "problemMatcher": [
+                "$nvcc"
+            ]
         }
     ]
+
 }

@@ -11,3 +11,9 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive  \
     && apt-get -y install --no-install-recommends curl ca-certificates \
     && bash -c "$(curl -fsSL "https://raw.githubusercontent.com/microsoft/vscode-dev-containers/main/script-library/common-debian.sh")" \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update && export DEBIAN_FRONTEND=noninteractive  \
+    && cd /tmp \
+    && wget https://download-gcdn.ej-technologies.com/install4j/install4j_linux_8_0_11.deb \
+    && apt install -y ./install4j_linux_8_0_11.deb \
+    && apt-get clean -y && rm -rf /var/lib/apt/lists/*
