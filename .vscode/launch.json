@@ -9,12 +9,12 @@
             "name": "SNAP Desktop", 
             "request": "launch", 
             "mainClass": "org.esa.snap.nbexec.Launcher", 
-            "cwd": "${workspaceFolder}/snap-application/target/snap", 
+            "cwd": "${workspaceFolder}/snap-desktop/snap-application/target/snap", 
             "vmArgs": "-Dsun.java2d.noddraw=true -Dsun.awt.nopixfmt=true -Dsun.java2d.dpiaware=false -Dorg.netbeans.level=INFO -Dsnap.debug=true -Xmx4G", 
             "args": [
-                "--userdir", "{workspaceFolder}/snap-application/target/userdir", 
-                "--clusters", "${workspaceFolder}/s2tbx/s2tbx-kit/target/netbeans_clusters/s2tbx",
-                "--patches", "${workspaceFolder}/snap-engine/$/target/classes:${workspaceFolder}/s2tbx/$/target/classes"
+                "--userdir", "{workspaceFolder}/snap-desktop/snap-application/target/userdir", 
+                "--clusters", "${workspaceFolder}/s1tbx/s1tbx-kit/target/netbeans_clusters/s1tbx:${workspaceFolder}/s2tbx/s2tbx-kit/target/netbeans_clusters/s2tbx:${workspaceFolder}/s3tbx/s3tbx-kit/target/netbeans_clusters/s3tbx",
+                "--patches", "${workspaceFolder}/snap-engine/$/target/classes:${workspaceFolder}/s1tbx/$/target/classes:${workspaceFolder}/s2tbx/$/target/classes:${workspaceFolder}/s2tbx/$/target/classes"
             ], 
         },
          
